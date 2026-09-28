@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Web Full Screen</title>
+
+<style>
+
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ececec;
+}
+
+/* ===== CONTENEDOR ===== */
+.container{
+    width:100%;
+    min-height:100vh;
+    background:white;
+
+    display:grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "footer";
+}
+
+/* ===== HEADER ===== */
+header{
+    grid-area:header;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    background:#111;
+    color:white;
+}
+
+.logo img{
+    width:45px;
+    border-radius:50%;
+}
+
+.auth a{
+    color:white;
+    text-decoration:none;
+    margin-left:10px;
+    font-weight:bold;
+}
+
+/* ===== NAV ===== */
+nav{
+    grid-area:nav;
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center; /* centra todo */
+}
+
+/* Banner centrado */
+.banner{
+    background:#999;
+    height:120px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
+/* ===== CATEGORIAS CENTRADAS Y VERTICALES ===== */
+.categorias{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    width:100%;
+}
+
+.categorias div{
+    background:#444;
+    color:white;
+    padding:12px 20px;
+    border-radius:20px;
+    width:70%;
+    text-align:center;
+}
+
+/* ===== CONTENT ===== */
+.content{
+    grid-area:content;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+    padding:15px;
+}
+
+main{
+    background:#f4f4f4;
+    padding:20px;
+    border-radius:10px;
+}
+
+aside{
+    background:#e2e2e2;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    grid-area:footer;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===== MEDIA QUERies ===== */
+@media(min-width:768px){
+
+    .content{
+        grid-template-columns:3fr 1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <div class="logo">
+        <img src="https://via.placeholder.com/100">
+    </div>
+
+    <div class="auth">
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+    </div>
+</header>
+
+<nav>
+
+    <div class="banner">
+        FOTO BANNER
+    </div>
+
+    <div class="categorias">
+        <div>Categoria 1</div>
+        <div>Categoria 2</div>
+        <div>Categoria 3</div>
+        <div>Categoria 4</div>
+    </div>
+
+</nav>
+
+<section class="content">
+
+    <main>
+        <h2>Main</h2>
+        <p>Hola buenas esto es una prueba y ahora las categorías están centradas y en vertical.</p>
+    </main>
+
+    <aside>
+        <h3>Aside</h3>
+        <p>Contenido lateral...</p>
+    </aside>
+
+</section>
+
+<footer>
+Lorem Ipsum — Footer completo
+</footer>
+
+</div>
+
+</body>
+</html>
